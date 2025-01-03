@@ -1,7 +1,8 @@
 'use client';
+
 import { useState } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
-import 'animate.css';  
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,47 +24,65 @@ const Contact = () => {
     alert("Formulaire soumis !");
   };
 
+  const containerVariants = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Décalage entre les enfants
+      },
+    },
+  };
+
+  const cardVariants = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
     <section id="contact" className="bg-black text-white py-16 px-6 lg:px-12">
       <div className="container mx-auto space-y-16">
+        {/* Contact Cards */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="initial"
+          whileInView="animate"  // L'animation se déclenche à chaque fois que la section devient visible
+          viewport={{ once: false, amount: 0.3 }}  // Animation à chaque apparition de la section dans la vue
+        >
+          {[
+            { icon: <FaPhoneAlt />, text: "+213 123 456 789" },
+            { icon: <FaEnvelope />, text: "contact@salle-de-sport.com" },
+            { icon: <FaMapMarkerAlt />, text: "123 Rue de la Salle, Alger, Algérie" },
+            { icon: <FaGlobe />, text: "www.salle-de-sport.com" },
+          ].map((card, index) => (
+            <motion.div
+              key={index}
+              className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500"
+              variants={cardVariants}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.8 }}  // Durée de l'animation
+            >
+              <div className="flex items-center space-x-4">
+                <div className="text-4xl text-yellow-500 group-hover:text-white transition duration-300">
+                  {card.icon}
+                </div>
+                <p className="text-lg">{card.text}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500 animate__animated animate__fadeIn animate__delay-1s">
-            <div className="flex items-center space-x-4">
-              <FaPhoneAlt className="text-4xl text-yellow-500 group-hover:text-white transition duration-300" />
-              <p className="text-lg">+213 123 456 789</p>
-            </div>
-          </div>
-
-          <div className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500 animate__animated animate__fadeIn animate__delay-2s">
-            <div className="flex items-center space-x-4">
-              <FaEnvelope className="text-4xl text-yellow-500 group-hover:text-white transition duration-300" />
-              <p className="text-lg">contact@salle-de-sport.com</p>
-            </div>
-          </div>
-
-          <div className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500 animate__animated animate__fadeIn animate__delay-3s">
-            <div className="flex items-center space-x-4">
-              <FaMapMarkerAlt className="text-4xl text-yellow-500 group-hover:text-white transition duration-300" />
-              <p className="text-lg">123 Rue de la Salle, Alger, Algérie</p>
-            </div>
-          </div>
-
-          <div className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500 animate__animated animate__fadeIn animate__delay-4s">
-            <div className="flex items-center space-x-4">
-              <FaGlobe className="text-4xl text-yellow-500 group-hover:text-white transition duration-300" />
-              <p className="text-lg">www.salle-de-sport.com</p>
-            </div>
-          </div>
-        </div>
-
-    
-        <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12 lg:px-32">
+        {/* Contact Form and Map */}
+        <motion.div
+          className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}  // Déclenche l'animation à chaque fois que la section devient visible
+          transition={{ duration: 1 }}
+        >
           <div className="lg:w-1/2 space-y-6">
-            <h2 className="text-4xl font-extrabold text-yellow-500 animate__animated animate__fadeIn animate__delay-1s">
-              Contactez-nous
-            </h2>
+            <h2 className="text-4xl font-extrabold text-yellow-500">Contactez-nous</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-lg font-medium">Nom</label>
@@ -102,18 +121,19 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="text-center">
-                <button
+                <motion.button
                   type="submit"
                   className="bg-yellow-500 text-black py-3 px-6 text-lg font-semibold transform transition duration-300 hover:scale-105"
+                  whileHover={{ scale: 1.1 }}
                 >
                   Envoyer
-                </button>
+                </motion.button>
               </div>
             </form>
           </div>
 
           <div className="lg:w-1/2">
-            <iframe
+            <motion.iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13131.434021582504!2d3.058760643216767!3d36.75277884508961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f64f947750d059%3A0x2c8d1cd8e858c2ad!2sAlger%2C%20Algeria!5e0!3m2!1sen!2sus!4v1601186363100!5m2!1sen!2sus"
               width="100%"
               height="400"
@@ -122,9 +142,12 @@ const Contact = () => {
               allowFullScreen=""
               aria-hidden="false"
               tabIndex="0"
-            ></iframe>
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            ></motion.iframe>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
