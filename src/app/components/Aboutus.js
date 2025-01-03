@@ -54,11 +54,7 @@ const AboutUs = () => {
         </div>
 
  
-        <div className="text-center mt-8">
-          <button className="bg-yellow-500 text-black py-3 px-6 text-lg font-semibold transform transition duration-300 hover:scale-105">
-            Rejoindre maintenant
-          </button>
-        </div>
+    
       </div>
     </section>
   );
