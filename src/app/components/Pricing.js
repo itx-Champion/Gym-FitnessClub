@@ -31,7 +31,7 @@ const Pricing = () => {
     ];
   
     return (
-      <div className="bg-black text-white  flex flex-col items-center py-10">
+      <div id ="pricing" className="bg-black text-white  flex flex-col items-center py-10">
         <h1 className="text-4xl font-bold mb-8 text-center animate-pulse">
           Tarifs 
         </h1>

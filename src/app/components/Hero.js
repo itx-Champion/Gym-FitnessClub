@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   const images = [
-    '/images/fitness1.jpg',
     '/images/fitness2.jpg',
+    '/images/fitness1.jpg',
   ];
 
   return (
