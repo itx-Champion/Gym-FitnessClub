@@ -73,12 +73,12 @@ const Contact = () => {
           ))}
         </motion.div>
 
-        {/* Contact Form and Map */}
+ 
         <motion.div
-          className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12"
+          className="flex flex-col lg:flex-row items-center justify-between lg:px-32 space-y-8 lg:space-y-0 lg:space-x-12"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}  // Déclenche l'animation à chaque fois que la section devient visible
+          viewport={{ once: false, amount: 0.3 }}  
           transition={{ duration: 1 }}
         >
           <div className="lg:w-1/2 space-y-6">
