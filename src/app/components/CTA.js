@@ -21,7 +21,7 @@ const CTA = () => {
             alt="Image CTA"
             layout="fill"
             objectFit="cover"
-            className="w-full h-full opacity-60"
+            className="w-full h-full opacity-50"
           />
    
           <div className="absolute flex flex-col items-center justify-center text-center space-y-6 px-4 sm:px-12 w-full max-w-4xl">

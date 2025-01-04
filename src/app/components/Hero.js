@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient */}
+  
       <motion.div
         className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/60 to-transparent"
         initial={{ opacity: 0 }}
@@ -18,7 +18,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
       ></motion.div>
 
-      {/* Background Images */}
+
       <motion.div
         className="absolute inset-0 w-full h-full"
         initial={{ scale: 1.2 }}
@@ -35,8 +35,8 @@ const Hero = () => {
             animate={{
               opacity: 1,
               transition: {
-                duration: 4,
-                delay: index * 4,
+                duration: 3,
+                delay: index * 2,
                 repeat: Infinity,
                 repeatType: 'reverse',
               },
@@ -45,7 +45,7 @@ const Hero = () => {
         ))}
       </motion.div>
 
-      {/* Text Content */}
+
       <motion.div
         className="relative z-20 text-center text-white space-y-6"
         initial={{ opacity: 0, y: 100 }}
