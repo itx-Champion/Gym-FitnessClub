@@ -14,12 +14,12 @@ const Schedule = () => {
     { day: 'Lundi', time: '16:00 - 17:00', course: 'HIIT', coach: 'Leila', id: 5 },
 
     { day: 'Mardi', time: '09:00 - 10:00', course: 'Cardio', coach: 'Sofia', id: 6 },
-    { day: 'Mardi', time: '10:00 - 11:00', course: 'Pilates', coach: 'Tarek', id: 7 },
+    { day: 'Mardi', time: '10:00 - 11:00', course: 'Pilates', coach: 'Imène', id: 7 },
     { day: 'Mardi', time: '12:00 - 13:00', course: 'Yoga', coach: 'Sarah', id: 8 },
     { day: 'Mardi', time: '14:00 - 15:00', course: 'Stretching', coach: 'Leila', id: 9 },
 
     { day: 'Mercredi', time: '09:00 - 10:00', course: 'Zumba', coach: 'Khadija', id: 10 },
-    { day: 'Mercredi', time: '11:00 - 12:00', course: 'HIIT', coach: 'Rachid', id: 11 },
+    { day: 'Mercredi', time: '11:00 - 12:00', course: 'HIIT', coach: 'Rachida', id: 11 },
     { day: 'Mercredi', time: '13:00 - 14:00', course: 'Boxe', coach: 'Imène', id: 12 },
 
     { day: 'Jeudi', time: '09:00 - 10:00', course: 'CrossFit', coach: 'Samira', id: 13 },

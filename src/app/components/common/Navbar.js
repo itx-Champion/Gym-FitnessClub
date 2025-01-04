@@ -60,6 +60,9 @@ export default function Navbar() {
           <Link href="#about" className="block py-2 px-4 hover:text-yellow-500" onClick={closeMenu}>
             A propos
           </Link>
+          <Link href="#schedule" className="block py-2 px-4 hover:text-yellow-500" onClick={closeMenu}>
+            Programme
+          </Link>
           <Link href="#pricing" className="block py-2 px-4 hover:text-yellow-500" onClick={closeMenu}>
             Tarifs
           </Link>

@@ -13,7 +13,7 @@ const CTA = () => {
       <div className="container mx-auto space-y-16">
         
         <motion.div
-          className="relative flex items-center justify-center w-full h-[300px] sm:h-[400px] lg:h-[500px] bg-black"
+          className="relative flex items-center justify-center w-full h-[500px] sm:h-[600px] lg:h-[500px] bg-black"
         >
      
           <Image
@@ -36,7 +36,7 @@ const CTA = () => {
             </motion.h2>
             
             <motion.p
-              className="text-base sm:text-lg md:text-xl leading-relaxed pt-4  sm:pt-6 md:pt-8"
+              className="text-base sm:text-lg md:text-xl leading-relaxed pt-4 sm:pt-6 md:pt-8"
               style={{ scale: textScale }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const CTA = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-     
+            
             </motion.div>
           </div>
         </motion.div>
