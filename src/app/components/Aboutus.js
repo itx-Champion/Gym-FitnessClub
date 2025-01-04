@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const AboutUs = () => {
   return (
-    <section id="about" className="bg-black text-white py-16 px-6 lg:px-12">
+    <section id="about" className="bg-black text-white py-16 px-6 lg:px-48">
       <div className="container mx-auto space-y-16">
-        {/* Première section */}
+
         <motion.div
           className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12"
           initial={{ opacity: 0, y: 100 }}
@@ -51,7 +51,7 @@ const AboutUs = () => {
           </div>
         </motion.div>
 
-        {/* Deuxième section */}
+
         <motion.div
           className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12"
           initial={{ opacity: 0, y: 100 }}

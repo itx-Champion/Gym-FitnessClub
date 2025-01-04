@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-black text-white py-16 px-6 lg:px-12">
+    <section id="contact" className="bg-black text-white py-16 px-6 lg:px-48">
       <div className="container mx-auto space-y-16">
         
         <motion.div
@@ -75,7 +75,7 @@ const Contact = () => {
 
  
         <motion.div
-          className="flex flex-col lg:flex-row items-center justify-between lg:px-32 space-y-8 lg:space-y-0 lg:space-x-12"
+          className="flex flex-col lg:flex-row items-center justify-between lg:px-12 space-y-8 lg:space-y-0 lg:space-x-12"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}  

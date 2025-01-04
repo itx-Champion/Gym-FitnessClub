@@ -37,9 +37,9 @@ const Schedule = () => {
   };
 
   return (
-    <section id="schedule" className="bg-black text-white py-16 px-6 lg:px-12">
+    <section id="schedule" className="bg-black text-white py-16 px-6 lg:px-48">
       <div className="container mx-auto space-y-16">
-        {/* Animation pour le titre */}
+       
         <motion.h2
           className="text-4xl font-extrabold text-yellow-500 text-center"
           initial={{ opacity: 0, y: -50 }}
@@ -49,7 +49,7 @@ const Schedule = () => {
           Programme des Cours Collectifs
         </motion.h2>
 
-        {/* Animation des onglets */}
+     
         <div className="flex flex-wrap justify-center gap-4 sm:flex-col sm:space-y-4 md:flex-row md:space-x-4">
           {['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'].map((day) => (
             <motion.button
@@ -70,7 +70,7 @@ const Schedule = () => {
           ))}
         </div>
 
-        {/* Animation pour chaque ligne de programme */}
+      
         <motion.div
           className="mt-8"
           variants={containerVariants}
