@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="space-y-4 animate__animated animate__fadeIn animate__delay-1s">
               <h3 className="text-2xl font-bold text-black">Contact</h3>
               <ul className="space-y-2 text-black">
-                <li>Email : contact@votresite.com</li>
+                <li>Email : contact@gym-next.com</li>
                 <li>Téléphone : +213 123 456 789</li>
                 <li>Adresse : 123 Rue de la Salle, Alger</li>
               </ul>

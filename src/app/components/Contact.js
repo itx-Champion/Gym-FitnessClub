@@ -29,7 +29,7 @@ const Contact = () => {
     animate: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Décalage entre les enfants
+        staggerChildren: 0.2, 
       },
     },
   };
@@ -42,26 +42,26 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-black text-white py-16 px-6 lg:px-12">
       <div className="container mx-auto space-y-16">
-        {/* Contact Cards */}
+        
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="initial"
-          whileInView="animate"  // L'animation se déclenche à chaque fois que la section devient visible
-          viewport={{ once: false, amount: 0.3 }}  // Animation à chaque apparition de la section dans la vue
+          whileInView="animate"  
+          viewport={{ once: false, amount: 0.3 }} 
         >
           {[
             { icon: <FaPhoneAlt />, text: "+213 123 456 789" },
-            { icon: <FaEnvelope />, text: "contact@salle-de-sport.com" },
+            { icon: <FaEnvelope />, text: "contact@gym-next.com" },
             { icon: <FaMapMarkerAlt />, text: "123 Rue de la Salle, Alger, Algérie" },
-            { icon: <FaGlobe />, text: "www.salle-de-sport.com" },
+            { icon: <FaGlobe />, text: "gym-nextjs-amina.vercel.app" },
           ].map((card, index) => (
             <motion.div
               key={index}
               className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500"
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.8 }}  // Durée de l'animation
+              transition={{ duration: 0.8 }}  
             >
               <div className="flex items-center space-x-4">
                 <div className="text-4xl text-yellow-500 group-hover:text-white transition duration-300">
