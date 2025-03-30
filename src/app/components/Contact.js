@@ -47,33 +47,37 @@ const Contact = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="initial"
-          whileInView="animate"  
-          viewport={{ once: false, amount: 0.3 }} 
+          whileInView="animate"
+          viewport={{ once: false, amount: 0.3 }}
         >
           {[
-            { icon: <FaPhoneAlt />, text: "+213 123 456 789" },
-            { icon: <FaEnvelope />, text: "contact@gym-next.com" },
-            { icon: <FaMapMarkerAlt />, text: "123 Rue de la Salle, Alger, Algérie" },
-            { icon: <FaGlobe />, text: "gym-nextjs-amina.vercel.app" },
+            { icon: <FaPhoneAlt />, text: "+213 123 456 789", title: "Phone" },
+            { icon: <FaEnvelope />, text: "contact@fitnessClub.com", title: "Email" },
+            { icon: <FaMapMarkerAlt />, text: "123 Rue de la Salle, Alger, NewYork", title: "Address" },
+            { icon: <FaGlobe />, text: "fitnessClub.com", title: "Website" },
           ].map((card, index) => (
             <motion.div
               key={index}
-              className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500"
+              className="cursor-pointer group bg-gray-900 p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-2xl hover:bg-yellow-500"
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.8 }}  
+              transition={{ duration: 0.8 }}
             >
-              <div className="flex items-center space-x-4">
-                <div className="text-4xl text-yellow-500 group-hover:text-white transition duration-300">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="text-5xl text-yellow-500 group-hover:text-white transition duration-300">
                   {card.icon}
                 </div>
-                <p className="text-lg">{card.text}</p>
+                <h3 className="text-xl font-semibold text-white group-hover:text-black">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-gray-400 group-hover:text-black">
+                  {card.text}
+                </p>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
- 
         <motion.div
           className="flex flex-col lg:flex-row items-center justify-between lg:px-12 space-y-8 lg:space-y-0 lg:space-x-12"
           initial={{ opacity: 0, y: 100 }}
