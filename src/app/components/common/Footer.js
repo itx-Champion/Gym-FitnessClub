@@ -55,7 +55,7 @@ const Footer = () => {
       
       <div className="bg-black py-4">
         <div className="container mx-auto text-center">
-          <p className="text-white text-sm">&copy; {currentYear} Crée par Amina Grine. Tous droits réservés.</p>
+          <p className="text-white text-sm">&copy; {currentYear} Crée par FitnessClub. Tous droits réservés.</p>
         </div>
       </div>
     </div>
